@@ -1,0 +1,157 @@
+title: Pages
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          type: markdown
+          display: Content
+          localizable: true
+      -
+        handle: author
+        field:
+          type: users
+          display: Author
+          default: current
+          localizable: true
+          max_items: 1
+      -
+        handle: template
+        field:
+          type: template
+          display: Template
+          localizable: true
+      -
+        handle: replicator
+        field:
+          collapse: false
+          sets:
+            local_glide:
+              display: 'Local Glide'
+              fields:
+                -
+                  handle: assets
+                  field:
+                    mode: grid
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    display: Assets
+                    type: assets
+                    icon: assets
+                    listable: hidden
+            local_responsive:
+              display: 'Local Responsive'
+              fields:
+                -
+                  handle: rep2
+                  field:
+                    collapse: false
+                    sets:
+                      new_set:
+                        display: 'New Set'
+                        fields:
+                          -
+                            handle: responsive
+                            field:
+                              use_breakpoints: false
+                              allow_ratio: true
+                              allow_fit: true
+                              breakpoints:
+                                - sm
+                                - md
+                                - lg
+                                - xl
+                                - 2xl
+                              restrict: false
+                              allow_uploads: true
+                              display: Responsive
+                              type: responsive
+                              icon: assets
+                              listable: hidden
+                              container: assets
+                    display: Replicator
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+            s3_glide:
+              display: 'S3 Glide'
+              fields:
+                -
+                  handle: assets
+                  field:
+                    mode: grid
+                    container: s3
+                    restrict: false
+                    allow_uploads: true
+                    display: Assets
+                    type: assets
+                    icon: assets
+                    listable: hidden
+            s3_responsive:
+              display: 'S3 Responsive'
+              fields:
+                -
+                  handle: rep2
+                  field:
+                    collapse: false
+                    sets:
+                      new_set:
+                        display: 'New Set'
+                        fields:
+                          -
+                            handle: responsive
+                            field:
+                              use_breakpoints: false
+                              allow_ratio: true
+                              allow_fit: true
+                              breakpoints:
+                                - sm
+                                - md
+                                - lg
+                                - xl
+                                - 2xl
+                              restrict: false
+                              allow_uploads: true
+                              display: Responsive
+                              type: responsive
+                              icon: assets
+                              listable: hidden
+                              container: s3
+                    display: Replicator
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+          display: Replicator
+          type: replicator
+          icon: replicator
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true

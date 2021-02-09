@@ -1,0 +1,52 @@
+<div class="container mx-auto bg-gray-400 py-12">
+  <nav>
+    <ul class="">
+      {{ nav handle="main_nav" }}
+        <li class="inline-block mr-10">
+          <a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ /if }}>
+            {{ title }}
+          </a>
+        </li>
+      {{ /nav }}
+    </ul>
+  </nav>
+</div>
+
+<div class="container mx-auto py-12">
+  <h1 class="text-2xl">
+    {{ title }}
+  </h1>
+  <div>
+    <div class="grid grid-cols-12 gap-4">
+      {{ replicator }}
+        {{ if type == "local_glide" }}
+          {{ assets }}
+            <div class="col-span-6">
+              <img src="{{ glide:url width="800" h="600" }}" alt="">
+            </div>
+          {{ /assets }}
+        {{ elseif type == "s3_glide" }}
+          {{ assets }}
+            <div class="col-span-6">
+              <img src="{{ glide:url width="800" h="600" }}" alt="">
+            </div>
+          {{ /assets }}
+        {{ elseif type == "local_responsive" }}
+          {{ rep2 }}
+              <div class="col-span-6">
+                {{ responsive:responsive }}
+              </div>
+          {{ /rep2 }}
+        {{ elseif type == "s3_responsive" }}
+          {{ rep2 }}
+              <div class="col-span-6">
+                {{ responsive:responsive }}
+              </div>
+          {{ /rep2 }}
+        {{ /if }}
+      </div>
+      {{ /replicator }}
+
+  </div>
+</div>
+

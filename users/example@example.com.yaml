@@ -1,0 +1,8 @@
+name: example
+super: true
+id: cfda757e-7cec-472e-9c49-99fd20b20318
+password_hash: $2y$10$6YDGvzSph2DQ/6v88Iuo3.mY8dZtluNDS0w2j5dGVz2ZpEaGOue5S
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
