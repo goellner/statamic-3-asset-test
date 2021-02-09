@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c13f5e76a1c4e350d7cbd7ca225f8a1",
+    "content-hash": "1965e09c8b38e74b5f39723c9d6e1377",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3677,16 +3677,16 @@
         },
         {
             "name": "spatie/statamic-responsive-images",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/statamic-responsive-images.git",
-                "reference": "a6889cb992d12363d1f9c6927c33ed6b43a55de4"
+                "reference": "e424f2aa83e3c221d6cf949a0756d676c602f9e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/statamic-responsive-images/zipball/a6889cb992d12363d1f9c6927c33ed6b43a55de4",
-                "reference": "a6889cb992d12363d1f9c6927c33ed6b43a55de4",
+                "url": "https://api.github.com/repos/spatie/statamic-responsive-images/zipball/e424f2aa83e3c221d6cf949a0756d676c602f9e3",
+                "reference": "e424f2aa83e3c221d6cf949a0756d676c602f9e3",
                 "shasum": ""
             },
             "require": {
@@ -3722,9 +3722,9 @@
             "description": "Responsive Images for Statamic 3",
             "support": {
                 "issues": "https://github.com/spatie/statamic-responsive-images/issues",
-                "source": "https://github.com/spatie/statamic-responsive-images/tree/v2.4.3"
+                "source": "https://github.com/spatie/statamic-responsive-images/tree/v2.4.4"
             },
-            "time": "2021-02-08T10:22:36+00:00"
+            "time": "2021-02-09T13:46:57+00:00"
         },
         {
             "name": "statamic/cms",
