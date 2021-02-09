@@ -30,6 +30,12 @@ replicator:
         responsive:
           src: architecture_04.jpg
           'glide:fit': crop_focal
+      -
+        type: new_set
+        enabled: true
+        responsive:
+          src: architecture_05.jpg
+          'glide:fit': crop_focal
     type: s3_responsive
     enabled: true
 id: 10c2616c-4741-4ccb-b7b3-f1dafc679888
