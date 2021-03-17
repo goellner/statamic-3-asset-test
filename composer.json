@@ -17,8 +17,8 @@
         "laravel/tinker": "^2.0",
         "league/flysystem-aws-s3-v3": "*",
         "league/flysystem-cached-adapter": "^1.1",
-        "spatie/statamic-responsive-images": "2.4.4",
-        "statamic/cms": "3.0.*"
+        "spatie/statamic-responsive-images": "2.5.3",
+        "statamic/cms": "3.1.*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
@@ -50,9 +50,12 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "alpha",
     "prefer-stable": true,
     "scripts": {
+        "pre-update-cmd": [
+            "Statamic\\Console\\Composer\\Scripts::preUpdateCmd"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
